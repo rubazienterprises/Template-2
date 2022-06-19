@@ -1,0 +1,121 @@
+.topfixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75px;
+  width: 100%;
+  background: rgb(241, 240, 240);
+  box-shadow: 10px 10px 10px rgb(163, 163, 163);
+  z-index: 100;
+}
+.heading {
+  position: relative;
+  padding: 10px;
+}
+/* .mymenu {
+  width: 32px;
+  height: 32px;
+  background: rgb(130, 238, 154);
+  margin: 20px 10px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.mymenu:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  margin-left: -2px;
+  background: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  box-shadow: 0px 8px white, 0px 16px white;
+} */
+.mymenu {
+  width: 50px;
+  height: 25px;
+  background: blue;
+  cursor: pointer;
+  padding: 25px;
+  text-shadow: 10px 10px 5px rgb(5, 5, 5);
+  color: white;
+}
+.mymenu:hover {
+  cursor: pointer;
+}
+
+.hideshowmenu {
+  list-style-type: none;
+  background: rgb(130, 238, 154);
+  /* width: 200px; */
+  box-shadow: 10px 10px 10px;
+}
+
+#automenu {
+  display: none;
+  transition: 0.5s all ease;
+  font-size: x-large;
+}
+#automenu:hover {
+  display: block;
+}
+
+.parent {
+  width: 400px;
+  height: 400px;
+  background: grey;
+}
+.child {
+  width: 200px;
+  height: 200px;
+  background: blueviolet;
+  transition: transform 1s ease-in-out forward;
+  transition-timing-function: infinite;
+}
+.parent:hover .child {
+  background: green;
+  /* transform: translateX(100%); */
+  animation-name: left-to-right;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  border-radius: 50%;
+}
+
+@keyframes left-to-right {
+  0% {
+    transform: translateX(0%);
+    background-color: red;
+  }
+  25% {
+    transform: translateY(100%);
+    background-color: yellow;
+  }
+  50% {
+    transform: translateX(100%) translateY(100%);
+    background-color: blue;
+  }
+  75% {
+    transform: translateX(100%);
+    background-color: rgb(128, 109, 0);
+  }
+  100% {
+    transform: translateX(0%) translateY(0%);
+  }
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(circle, white, green);
+  transition: 0.5s;
+}
+.circle:hover {
+  transform: scale(1.2, 1.2);
+}
